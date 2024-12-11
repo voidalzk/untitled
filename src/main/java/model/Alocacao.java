@@ -14,14 +14,13 @@ public class Alocacao {
     private LocalDate dataFim;
 
     @ManyToOne
-    @JoinColumn(name = "equipamento_id")
+    @JoinColumn(name = "equipamento_id", nullable = false)
     private Equipamento equipamento;
 
     @ManyToOne
-    @JoinColumn(name = "projeto_id")
+    @JoinColumn(name = "projeto_id", nullable = false)
     private Projeto projeto;
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }

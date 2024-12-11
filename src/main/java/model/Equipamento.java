@@ -17,7 +17,6 @@ public class Equipamento {
     @OneToMany(mappedBy = "equipamento", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Alocacao> alocacoes = new HashSet<>();
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }
