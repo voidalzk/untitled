@@ -1,6 +1,6 @@
 package servlet;
 
-import model.Usuario;
+import model.Empregado;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -22,9 +22,9 @@ public class MeuServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         EntityManager em = emf.createEntityManager();
-        List<Usuario> usuarios = em.createQuery("SELECT u FROM Usuario u", Usuario.class).getResultList();
+        List<Empregado> empregados = em.createQuery("SELECT u FROM Empregado u", Empregado.class).getResultList();
         em.close();
-        request.setAttribute("usuarios", usuarios);
+        request.setAttribute("empregados", empregados);
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 

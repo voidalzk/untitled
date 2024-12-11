@@ -17,4 +17,13 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+
+      <servlet>
+        <servlet-name>AssociateServlet</servlet-name>
+        <servlet-class>servlet.AssociateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AssociateServlet</servlet-name>
+        <url-pattern>/associate</url-pattern>
+    </servlet-mapping>
 </web-app>
